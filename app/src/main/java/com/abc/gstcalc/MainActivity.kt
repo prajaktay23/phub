@@ -22,13 +22,29 @@ class MainActivity : AppCompatActivity() {
 
         val txtrs = findViewById<TextView>(R.id.txtrs)
 
-        btcal.setOnClickListener {
+       /* btcal.setOnClickListener {
 
             txtans.text =
                 "" + (Integer.parseInt(edamt.text.toString()) + Integer.parseInt(edamt.text.toString()) * Integer.parseInt(
                     edgst.text.toString()
                 ) / 100)
             txtrs.text = "" + (Integer.parseInt(txtans.text.toString()) - Integer.parseInt(edamt.text.toString()))
+
+        }*/
+        btcal.setOnClickListener {
+            if (edamt.text.toString().isEmpty() || edgst.text.toString().isEmpty() || edamt.text.toString() == null || edgst.text.toString() == null) {
+                txtans.text = "invalid amt"
+                txtrs.text = "invalid gst %"
+
+            }else{
+                txtans.text =
+                    "" + (Integer.parseInt(edamt.text.toString()) + Integer.parseInt(edamt.text.toString()) * Integer.parseInt(
+                        edgst.text.toString()
+                    ) / 100)
+                txtrs.text = "" + (Integer.parseInt(txtans.text.toString()) - Integer.parseInt(edamt.text.toString()))
+
+            }
         }
+
     }
 }

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:hint="amount"
             android:textSize="25sp"
-    android:inputType="number"/>
+            android:inputType="number"/>
 
     <EditText
             android:id="@+id/edgst"
