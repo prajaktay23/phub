@@ -29,16 +29,40 @@ class MainActivity : AppCompatActivity() {
         val TxSt = findViewById<TextView>(R.id.TxSt)
 
         btadd.setOnClickListener {
-            TxSt.text=""+ (Integer.parseInt(etnum1.text.toString())+ Integer.parseInt(etnum2.text.toString()))
+            if (TxSt.text.toString().isEmpty() || TxSt.text.toString() == null) {
+                TxSt.text = "enter a number"
+
+            } else {
+                TxSt.text = "" + (Integer.parseInt(etnum1.text.toString()) + Integer.parseInt(etnum2.text.toString()))
+            }
         }
         btsub.setOnClickListener {
-            TxSt.text=""+ (Integer.parseInt(etnum1.text.toString())- Integer.parseInt(etnum2.text.toString()))
+            if (TxSt.text.toString().isEmpty() || TxSt.text.toString() == null) {
+                TxSt.text = "enter a number"
+
+            } else {
+                TxSt.text =
+                    "" + (Integer.parseInt(etnum1.text.toString()) - Integer.parseInt(etnum2.text.toString()))
+            }
         }
         btmul.setOnClickListener {
-            TxSt.text=""+ (Integer.parseInt(etnum1.text.toString())* Integer.parseInt(etnum2.text.toString()))
+            if (TxSt.text.toString().isEmpty() || TxSt.text.toString() == null) {
+                TxSt.text = "enter a number"
+
+            } else {
+
+                TxSt.text =
+                    "" + (Integer.parseInt(etnum1.text.toString()) * Integer.parseInt(etnum2.text.toString()))
+            }
         }
         btdiv.setOnClickListener {
-            TxSt.text=""+ (Integer.parseInt(etnum1.text.toString())/ Integer.parseInt(etnum2.text.toString()))
+            if (TxSt.text.toString().isEmpty() || TxSt.text.toString() == null) {
+                TxSt.text = "enter a number"
+
+            } else {
+                TxSt.text =
+                    "" + (Integer.parseInt(etnum1.text.toString()) / Integer.parseInt(etnum2.text.toString()))
+            }
         }
 
 
